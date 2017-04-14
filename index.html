@@ -14,7 +14,8 @@
 	<script src="js/jquery-3.1.1.min.js"></script>
 	<script src="js/slick.js"></script>
 	<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script><![endif]-->
-	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+	<!-- <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script> -->
+	
 	<script src="js/scripts.js"></script>
 </head>
 <body>
@@ -242,7 +243,8 @@ AIzaSyDbgyX-UlPhVsvvVot7G9S9OJoVidxYJzU
 			src="https://www.google.com/maps/embed/v1/search?key=AIzaSyDbgyX-UlPhVsvvVot7G9S9OJoVidxYJzU&q=record+stores+in+Seattle" allowfullscreen>
 		</iframe>
 		</div>
-		<div id="map" style="{{width: 100%, height: 449px}}"></div><!-- /map -->
+		<div id="map2"></div>
+		<div id="map"></div><!-- /map -->
 		<footer id="footer">
 			<div class="footer-top">
 				<div class="container">
@@ -324,5 +326,19 @@ AIzaSyDbgyX-UlPhVsvvVot7G9S9OJoVidxYJzU
 			</div><!-- /footer-bottom -->
 		</footer><!-- /footer -->
 	</div><!-- /wrapper -->
+	<script>
+      function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map2'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbgyX-UlPhVsvvVot7G9S9OJoVidxYJzU&callback=initMap"></script>
 </body>
 </html>	
