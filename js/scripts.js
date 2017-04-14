@@ -35,21 +35,13 @@ $(document).ready(function () {
 	});		
 
 });
-/* Map */
+/* Map */	
 function initMap() {
 	var uluru = {lat: -25.363, lng: 131.044};
 	var map = new google.maps.Map(document.getElementById('map'), {
-		zoom: 4,
-		center: uluru
-	});
-	var marker = new google.maps.Marker({
-		position: uluru,
-		map: map
-	});
-	var mapOptions = {
 		zoom: 11,
-		center: new google.maps.LatLng(40.743566, -73.4069479), 
-		scrollwheel: false,
+		center: new google.maps.LatLng(40.743566, -73.4069479),
+				scrollwheel: false,
 		mapTypeControl: true,
 		mapTypeControlOptions: {
 			style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
@@ -116,14 +108,12 @@ function initMap() {
 				"visibility": "on"
 			}]
 		}]
-	};
-	var mapElement = document.getElementById('map');
-	var map = new google.maps.Map(mapElement, mapOptions);
+	});
 	var marker = new google.maps.Marker({
 		position: new google.maps.LatLng(40.713566, -73.559479),
 		icon: {
-			url: "images/ico-marker.png",
-			scaledSize: new google.maps.Size(57, 85)
+			url: "images/ico-marker-03.png",
+			scaledSize: new google.maps.Size(49, 86)
 		},
 		map: map
 	});
@@ -131,8 +121,8 @@ function initMap() {
 		position: new google.maps.LatLng(40.665934, -73.488181),
 		map: map,
 		icon: {
-			url: "images/ico-marker.png",
-			scaledSize: new google.maps.Size(57, 85)
+			url: "images/ico-marker-03.png",
+			scaledSize: new google.maps.Size(49, 86)
 		},
 	});
 }
