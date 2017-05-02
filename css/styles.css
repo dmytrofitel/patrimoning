@@ -432,16 +432,13 @@ h2 {
 	font: 36px/38px 'Montserrat', sans-serif;
 	margin: 0 0 45px;
 }
-h2.stroke-ico:after {
-	top: 43px;
-}
 .stroke-ico {
 	position: relative;
 }
 .stroke-ico:after {
 	position: absolute;
 	content: '';
-	top: 45px;
+	bottom: -17px;
 	left: 50%;
 	transform: translateX(-50%);
 	background: url(../images/bg-ico-001.png) 0 0 no-repeat;
