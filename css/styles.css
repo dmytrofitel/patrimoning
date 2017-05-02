@@ -128,6 +128,7 @@ header:after {
 	background: url(../images/logo.png) 0 0 no-repeat;
 	width: 217px;
 	height: 69px;
+	display: block;
 	text-indent: -9999px;
 	overflow: hidden;
 	margin: 36px 0 0;
@@ -289,7 +290,6 @@ header:after {
 	width: 100%;
 }
 #main-nav .menu-bar {
-	position: relative;
 	list-style: none;
 	padding: 0;
 	margin: 0;
@@ -299,17 +299,20 @@ header:after {
 }
 #main-nav .menu-bar li {
 	display: inline-block;
+	position:relative;
 }
-#main-nav .menu-bar:after {
+#main-nav .menu-bar li:after {
 	position: absolute;
 	display: block;
 	top: 2px;
-	left: 50%;
+	left: 100%;
 	content: '';
 	height: 15px;
-	width: 2px;
 	border-right: 1px solid #fff;
 	z-index: 1;
+}
+#main-nav .menu-bar li:last-child:after {
+	display: none;
 }
 #main-nav .menu-bar li a {
 	padding: 3px 14px 8px;
@@ -418,8 +421,9 @@ h1 {
 .search {
 	background: #f7f7f7;
 }
-.search .container {
-	max-width: 652px;
+.search-form {
+	font-size: 0;
+	line-height: 0;
 }
 .search-holder {
 	height: 100%;
@@ -462,13 +466,12 @@ h2 {
 	height: 50px;
 	max-width: 450px;
 	width: 100%;
-	padding: 0 22px;
+	padding: 11px 22px;
 	color: #204d69;
-	margin: 0 14px 0 0;
+	margin: 0 17px 0 0;
 	font:300 16px/39px 'Lato',sans-serif;
 }
 .btn-search {
-	display: inline-block;
 	margin-bottom: 0;
 	text-align: center;
 	border: 1px solid transparent;
@@ -502,7 +505,7 @@ h2 {
 }
 /* Sidebar */
 #sidebar {
-	max-width: 300px;
+	width: 25%;
 	padding: 0 15px;
 	overflow: hidden;
 }
@@ -582,7 +585,7 @@ h2 {
 }
 /* Content */
 .content {
-	max-width: 75%;
+	width: 75%;
 	padding: 0 15px;
 	float: right;
 }
@@ -1160,7 +1163,7 @@ h2 {
 	}
 	.content,
 	#sidebar {
-		max-width: 100%;
+		width: 100%;
 	}
 	#sidebar .sidebar-list {
 		float: left;
